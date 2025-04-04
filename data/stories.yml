@@ -1,0 +1,85 @@
+version: "3.1"
+
+stories:
+  - story: Happy path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_deadline
+      - action: utter_ask_deadline
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: User asks about documents
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_documents
+      - action: utter_ask_documents
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: User asks about eligibility
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_eligibility
+      - action: utter_ask_eligibility
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: User asks about fees
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_fees
+      - action: utter_ask_fees
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: User asks about scholarships
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_scholarships
+      - action: utter_ask_scholarships
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: User asks about facilities
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_facilities
+      - action: utter_ask_facilities
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: User asks about contact info
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_contact
+      - action: utter_ask_contact
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: Fallback story
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: nlu_fallback  # Fallback intent
+      - action: utter_default  # Default response
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: Multi-turn conversation about fees
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_fees
+      - action: utter_ask_fees
+      - intent: ask_scholarships  # Follow-up question
+      - action: utter_ask_scholarships
+      - intent: goodbye
+      - action: utter_goodbye

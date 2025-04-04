@@ -1,0 +1,134 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hi
+      - hello
+      - good morning
+      - hey there
+      - howdy
+      - hi there
+      - hello there
+      - good afternoon
+      - good evening
+      - hey
+      - greetings
+      - hi bot
+      - hello bot
+      - hey bot
+
+  - intent: goodbye
+    examples: |
+      - bye
+      - goodbye
+      - see you later
+      - have a nice day
+      - goodnight
+      - bye bye
+      - see you
+      - take care
+      - catch you later
+      - farewell
+      - bye for now
+      - see you soon
+      - talk to you later
+
+  - intent: ask_deadline
+    examples: |
+      - What is the application deadline?
+      - When is the last date to apply?
+      - I want to know about last date to apply.
+      - I want to know about the deadline for applying.
+      - I would like to know about the application deadline.
+      - Deadline for submission?
+      - When does the application close?
+      - What is the deadline for applications?
+      - When is the final date to submit the application?
+      - What is the last date to apply for the program?
+      - When is the application due?
+      - What is the closing date for applications?
+      - When is the application period over?
+
+  - intent: ask_documents
+    examples: |
+      - What documents are required?
+      - what are required docs?
+      - Do I need to submit a recommendation letter?
+      - I would like to know about the required documents.
+      - List of required documents?
+      - What do I need to apply?
+      - What are the required documents for admission?
+      - What paperwork is needed for the application?
+      - What documents should I prepare?
+      - What are the application materials?
+      - What do I need to submit with my application?
+      - What are the supporting documents required?
+
+  - intent: ask_eligibility
+    examples: |
+      - What are the eligibility criteria?
+      - Am I eligible for this program?
+      - Can I apply for this course?
+      - What are the admission requirements?
+      - What qualifications do I need for this program?
+      - What are the prerequisites for this course?
+      - Do I meet the eligibility requirements?
+      - What is the minimum qualification for this program?
+      - What are the criteria for admission?
+      - What are the academic requirements for this course?
+
+  - intent: ask_fees
+    examples: |
+      - How much are the tuition fees?
+      - What is the fee structure?
+      - What are the course fees?
+      - i want to know about the tuition fees.
+      - can i know the tuition fee.
+      - How much does the program cost?
+      - What is the total fee for the course?
+      - What are the tuition costs?
+      - How much do I need to pay for the program?
+      - What is the fee for this course?
+      - What are the program fees?
+      - How much is the tuition for this program?
+
+  - intent: ask_scholarships
+    examples: |
+      - Are there any scholarships available?
+      - How can I apply for a scholarship?
+      - What are the scholarship options?
+      - Are there any financial aid options?
+      - Can I get a scholarship for this program?
+      - What scholarships are offered by the university?
+      - How do I apply for financial aid?
+      - Are there any merit-based scholarships?
+      - What are the available scholarships?
+      - How can I get a scholarship for this course?
+
+  - intent: ask_facilities
+    examples: |
+      - What campus facilities are available?
+      - Do you have a gym on campus?
+      - Is there a library?
+      - What facilities are there on campus?
+      - Are there sports facilities?
+      - Does the university have a cafeteria?
+      - What amenities are available on campus?
+      - Are there any recreational facilities?
+      - What are the campus resources?
+      - Does the campus have a student center?
+
+  - intent: ask_contact
+    examples: |
+      - How can I contact the admissions office?
+      - What is the phone number for admissions?
+      - Where is the admissions office located?
+      - How do I reach the admissions office?
+      - What is the email for admissions?
+      - Where can I find the admissions office?
+      - How do I get in touch with the admissions team?
+      - What is the contact information for admissions?
+      - How can I speak to someone in admissions?
+      - Where is the admissions department?
+  

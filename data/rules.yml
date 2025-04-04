@@ -1,0 +1,52 @@
+version: "3.1"
+
+rules:
+  - rule: Say goodbye anytime the user says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Greet the user
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Respond to ask_deadline
+    steps:
+      - intent: ask_deadline
+      - action: utter_ask_deadline
+
+  - rule: Respond to ask_documents
+    steps:
+      - intent: ask_documents
+      - action: utter_ask_documents
+
+  - rule: Respond to ask_eligibility
+    steps:
+      - intent: ask_eligibility
+      - action: utter_ask_eligibility
+
+  - rule: Respond to ask_fees
+    steps:
+      - intent: ask_fees
+      - action: utter_ask_fees
+
+  - rule: Respond to ask_scholarships
+    steps:
+      - intent: ask_scholarships
+      - action: utter_ask_scholarships
+
+  - rule: Respond to ask_facilities
+    steps:
+      - intent: ask_facilities
+      - action: utter_ask_facilities
+
+  - rule: Respond to ask_contact
+    steps:
+      - intent: ask_contact
+      - action: utter_ask_contact
+
+  - rule: Fallback rule
+    steps:
+      - intent: nlu_fallback
+      - action: utter_default

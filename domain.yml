@@ -1,0 +1,125 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - ask_deadline
+  - ask_documents
+  - ask_eligibility
+  - ask_fees
+  - ask_scholarships
+  - ask_facilities
+  - ask_contact
+
+entities:
+  - application_deadlines
+  - required_documents
+  - eligibility_criteria
+  - tuition_fees
+  - scholarships
+  - campus_facilities
+  - contact_info
+
+slots:
+  application_deadlines:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: application_deadlines
+
+  required_documents:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: required_documents
+
+  eligibility_criteria:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: eligibility_criteria
+
+  tuition_fees:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: tuition_fees
+
+  scholarships:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: scholarships
+
+  campus_facilities:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: campus_facilities
+
+  contact_info:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: contact_info
+
+responses:
+  utter_greet:
+    - text: "Hello! How can I assist you today?"
+    - text: "Hi there! What can I help you with?"
+    - text: "Welcome! How may I guide you?"
+
+  utter_goodbye:
+    - text: "Goodbye! Have a great day!"
+    - text: "See you later! Feel free to return if you have more questions."
+    - text: "Farewell! Don't hesitate to reach out again."
+
+  utter_ask_deadline:
+    - text: "The application deadline is December 31, 2023."
+    - text: "You need to submit your application by December 31st this year."
+    - text: "Applications close on December 31, 2023 - mark your calendar!"
+
+  utter_ask_documents:
+    - text: "You'll need to submit: 1. Transcripts, 2. Recommendation letters, 3. Statement of Purpose."
+    - text: "Required documents include: academic transcripts, 2 recommendation letters, and a Statement of Purpose."
+    - text: "Prepare these documents: your transcripts, recommendation letters (2), and a SOP."
+
+  utter_ask_eligibility:
+    - text: "You'll need a minimum GPA of 3.0 and a bachelor's degree in a related field."
+    - text: "Eligibility requires: 3.0 GPA or higher and a relevant bachelor's degree."
+    - text: "Criteria: At least a 3.0 GPA plus an undergraduate degree in this field."
+
+  utter_ask_fees:
+    - text: "The program costs $10,000 per year in tuition fees."
+    - text: "Tuition is $10,000 annually for this program."
+    - text: "Annual fees are set at $10,000 for this course."
+
+  utter_ask_scholarships:
+    - text: "Yes! We offer both merit-based and need-based scholarships. Check our scholarship portal for details."
+    - text: "Scholarships are available based on merit and financial need. Visit our website to apply."
+    - text: "We provide several scholarship options. Would you like me to share the application link?"
+
+  utter_ask_facilities:
+    - text: "Our campus features a library, gym, cafeteria, and sports complex."
+    - text: "Facilities include: 24/7 library access, fitness center, dining hall, and athletic fields."
+    - text: "You'll enjoy access to: modern library, fully-equipped gym, food court, and sports arena."
+
+  utter_ask_contact:
+    - text: "Reach admissions at +1-123-456-7890 or email admissions@university.edu."
+    - text: "Contact info: Phone +1-123-456-7890 | Email admissions@university.edu."
+    - text: "Call +1-123-456-7890 or email admissions@university.edu for assistance."
+
+  utter_default:
+    - text: "I didn't quite get that. Could you rephrase?"
+    - text: "Sorry, I didn't understand. Can you say that differently?"
+    - text: "My apologies, could you please repeat that in another way?"
+
+actions:
+  - action_say_data

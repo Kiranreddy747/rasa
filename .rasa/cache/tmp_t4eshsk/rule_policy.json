@@ -1,0 +1,43 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"active_loop\": {\"name\": \"simple_form\"}, \"prev_action\": {\"action_name\": \"utter_ask_phone\"}}]": "action_listen",
+      "[{\"active_loop\": {\"name\": \"simple_form\"}, \"prev_action\": {\"action_name\": \"utter_ask_name\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}]": "utter_goodbye",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"goodbye\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "utter_iamabot",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"inform\"}}]": "simple_form",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"inform\"}}, {\"active_loop\": {\"name\": \"simple_form\"}, \"prev_action\": {\"action_name\": \"simple_form\"}, \"user\": {\"intent\": \"inform\"}}]": "action_listen",
+      "[{\"active_loop\": {\"name\": \"simple_form\"}, \"prev_action\": {\"action_name\": \"utter_ask_city\"}}]": "action_listen",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"simple_form\"}}]": "action_say_data",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"simple_form\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"action_say_data\"}}]": "action_listen",
+      "[{\"active_loop\": {\"name\": \"simple_form\"}, \"prev_action\": {\"action_name\": \"utter_ask_DOB\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [
+      "simple_form"
+    ],
+    "rules_for_loop_unhappy_path": {
+      "[{\"active_loop\": {\"name\": \"simple_form\"}, \"prev_action\": {\"action_name\": \"utter_ask_phone\"}}]": "do_not_predict_loop_action",
+      "[{\"active_loop\": {\"name\": \"simple_form\"}, \"prev_action\": {\"action_name\": \"utter_ask_name\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"simple_form\"}, \"prev_action\": {\"action_name\": \"simple_form\"}, \"user\": {\"intent\": \"inform\"}}]": "do_not_predict_loop_action",
+      "[{\"active_loop\": {\"name\": \"simple_form\"}, \"prev_action\": {\"action_name\": \"utter_ask_city\"}}]": "do_not_predict_loop_action",
+      "[{\"active_loop\": {\"name\": \"simple_form\"}, \"prev_action\": {\"action_name\": \"utter_ask_DOB\"}}]": "do_not_predict_loop_action"
+    },
+    "rules_not_in_stories": [
+      "[{\"active_loop\": {\"name\": \"simple_form\"}, \"prev_action\": {\"action_name\": \"utter_ask_DOB\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"inform\"}}]",
+      "handling active loops and forms - simple_form - action_listen",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"simple_form\"}}]",
+      "[{\"active_loop\": {\"name\": \"simple_form\"}, \"prev_action\": {\"action_name\": \"utter_ask_city\"}}]",
+      "[{\"active_loop\": {\"name\": \"simple_form\"}, \"prev_action\": {\"action_name\": \"utter_ask_phone\"}}]",
+      "[{\"active_loop\": {\"name\": \"simple_form\"}, \"prev_action\": {\"action_name\": \"utter_ask_name\"}}]",
+      "predicting default action with intent back",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"simple_form\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"action_say_data\"}}]",
+      "handling active loops and forms - simple_form",
+      "predicting default action with intent session_start",
+      "predicting default action with intent restart"
+    ]
+  }
+}
